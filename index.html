@@ -43,149 +43,121 @@
     <!-- 导航栏 - 固定定位、毛玻璃效果、圆角设计 -->
     <!-- sticky定位(top-5)、外边距(mx-5)、z轴层级(z-50)、背景色(bg-card)、模糊效果(backdrop-blur-md) -->
     <!-- 内边距(py-5 px-5)、弹性布局(flex justify-between items-center)、圆角(rounded-3xl) -->
-    <header class="mx-5 bg-card backdrop-blur-md py-5 px-5 flex justify-between items-center rounded-3xl">
+    <header class="mt-5 mx-5 bg-card backdrop-blur-md py-5 px-5 flex justify-between items-center rounded-3xl">
         <!-- Logo区域 - 图片 -->
         <div class="flex items-center">
             <img src="/images/logo.png" alt="BeautyCam Logo" class="w-[166px] h-[36px] object-contain">
         </div>
-        <!-- 导航菜单 - 响应式隐藏(hidden md:flex)、项目间距(space-x-8) -->
-        <nav class="hidden md:flex space-x-8">
-            <!-- 导航链接 - 灰色文字(text-gray-700)、悬停黑色(hover:text-black)、颜色过渡(transition-colors) -->
-            <a href="#" class="text-gray-700 hover:text-black transition-colors">Photo Editor</a>
-            <a href="#" class="text-gray-700 hover:text-black transition-colors">Video Editor</a>
-            <a href="#" class="text-gray-700 hover:text-black transition-colors">Cameras</a>
-            <a href="#" class="text-gray-700 hover:text-black transition-colors">Editing Tools</a>
-            <a href="#" class="text-gray-700 hover:text-black transition-colors">AI Photos</a>
+        <!-- 导航菜单 - 响应式隐藏、项目间距32px -->
+        <nav class="hidden md:flex" style="gap: 32px">
+            <!-- 导航链接 - 灰色文字(#374151)、悬停黑色(#000000)、颜色过渡 -->
+            <a href="#" style="color: #374151; transition: color 0.3s" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='#374151'">Photo Editor</a>
+            <a href="#" style="color: #374151; transition: color 0.3s" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='#374151'">Video Editor</a>
+            <a href="#" style="color: #374151; transition: color 0.3s" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='#374151'">Cameras</a>
+            <a href="#" style="color: #374151; transition: color 0.3s" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='#374151'">Editing Tools</a>
+            <a href="#" style="color: #374151; transition: color 0.3s" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='#374151'">AI Photos</a>
         </nav>
-        <button class="md:hidden text-gray-700">
-            <i class="ri-menu-line text-2xl"></i>
+        <button class="md:hidden" style="color: #374151">
+            <i class="ri-menu-line" style="font-size: 24px"></i>
         </button>
     </header>
 
     <!-- 主要内容区 - Bento Grid 布局 -->
-    <!-- 容器居中(container mx-auto)、固定高度(max-h-[900px]) -->
-    <main class="container mx-5 mt-5 max-h-[900px] overflow-hidden">
-        <!-- 网格布局 - 固定4列、间距(gap-4)、高度自适应 -->
-        <div class="grid gap-4 grid-cols-4 auto-rows-auto" style="grid-template-columns: repeat(4, 1fr);">
+    <main style="margin: 20px 20px 0 20px; max-height: 900px; overflow: hidden">
+        <!-- 网格布局 - 固定4列、间距16px、高度自适应 -->
+        <div style="display: grid; gap: 16px; grid-template-columns: repeat(4, 1fr); auto-rows: auto">
             <!-- 美化照片卡片 - 大尺寸 -->
-            <!-- 网格跨度(col-span-1)、双倍高度(row-span-2)、渐变背景(bg-gradient-to-r from-purple-300 to-pink-300) -->
-            <!-- 圆角(rounded-3xl)、溢出隐藏(overflow-hidden)、相对定位(relative)、悬停缩放效果(hover-scale transition-transform) -->
-            <div class="col-span-1 row-span-2 bg-gradient-to-r from-purple-300 to-pink-300 rounded-3xl overflow-hidden relative hover-scale transition-transform h-[400px]">
-                <!-- 标题定位 - 绝对定位(absolute)、底部左侧(bottom-6 left-6)、层级(z-10) -->
-                <!-- 文字样式 - 白色(text-white)、大号(text-xl)、加粗(font-bold)、阴影效果(text-shadow) -->
-                <div class="absolute bottom-6 left-6 z-10">
-                    <h3 class="text-white text-xl font-bold text-shadow">Beautify Photo</h3>
+            <div style="grid-column: span 1; grid-row: span 2; background: linear-gradient(to right, #d8b4fe, #f9a8d4); border-radius: 24px; overflow: hidden; position: relative; height: 400px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                <div style="position: absolute; bottom: 24px; left: 24px; z-index: 10">
+                    <h3 style="color: #ffffff; font-size: 20px; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.1)">Beautify Photo</h3>
                 </div>
                 <video src="/images/beautify_photo.mov" 
                      alt="Beautify Photo" 
-                     class="w-full h-full object-cover"
+                     style="width: 100%; height: 100%; object-fit: cover"
                      autoplay loop muted playsinline></video>
             </div>
 
             <!-- 功能图标卡片 - 浅灰背景、圆角、内边距 -->
-            <!-- 单列跨度(col-span-1)、卡片背景(bg-card)、大圆角(rounded-3xl)、内边距(p-6)、悬停效果(hover-scale transition-transform) -->
-            <div class="col-span-1 bg-card rounded-3xl p-6 hover-scale transition-transform h-[190px]">
-                <div class="grid grid-cols-3 gap-6">
-                    <div class="flex flex-col items-center justify-center">
-                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-2">
-                            <i class="ri-refresh-line text-xl text-gray-700"></i>
-                        </div>
+            <div style="grid-column: span 1; background-color: #F5F5F7; border-radius: 24px; padding: 24px; height: 190px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; height: 100%">
+                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+                        <img src="/images/卡片2icon/卡片2icon01.png" alt="Icon 1" style="width: 28px; height: 28px; object-fit: contain">
                     </div>
-                    <div class="flex flex-col items-center justify-center">
-                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-2">
-                            <i class="ri-brush-line text-xl text-gray-700"></i>
-                        </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+                        <img src="/images/卡片2icon/卡片2icon02.png" alt="Icon 2" style="width: 28px; height: 28px; object-fit: contain">
                     </div>
-                    <div class="flex flex-col items-center justify-center">
-                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-2">
-                            <i class="ri-magic-line text-xl text-gray-700"></i>
-                        </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+                        <img src="/images/卡片2icon/卡片2icon03.png" alt="Icon 3" style="width: 28px; height: 28px; object-fit: contain">
                     </div>
-                    <div class="flex flex-col items-center justify-center">
-                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-2">
-                            <i class="ri-user-smile-line text-xl text-gray-700"></i>
-                        </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+                        <img src="/images/卡片2icon/卡片2icon04.png" alt="Icon 4" style="width: 28px; height: 28px; object-fit: contain">
                     </div>
-                    <div class="flex flex-col items-center justify-center">
-                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-2">
-                            <i class="ri-moon-clear-line text-xl text-gray-700"></i>
-                        </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+                        <img src="/images/卡片2icon/卡片2icon05.png" alt="Icon 5" style="width: 28px; height: 28px; object-fit: contain">
                     </div>
-                    <div class="flex flex-col items-center justify-center">
-                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-2">
-                            <i class="ri-sun-line text-xl text-gray-700"></i>
-                        </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+                        <img src="/images/卡片2icon/卡片2icon06.png" alt="Icon 6" style="width: 28px; height: 28px; object-fit: contain">
                     </div>
+                </div>
+            </div>
+
+            <!-- 三人图片卡片 - 浅灰背景、圆角、弹性布局 -->
+            <div style="grid-column: span 1; background-color: #F5F5F7; border-radius: 24px; overflow: hidden; height: 190px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                <img src="/images/三人图片.png" 
+                     alt="三人图片" 
+                     style="width: 100%; height: 100%; object-fit: cover">
+            </div>
+
+            <!-- 主要CTA卡片 - 主题色背景、居中布局 -->
+            <div style="grid-column: span 2; background-color: #FFA1ED; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; height: 190px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                <h2 style="font-size: 36px; font-weight: bold; margin-bottom: 16px">The Only Photo Editor<br>You'll Ever Need</h2>
+                <div style="display: flex; gap: 16px; margin-top: 24px">
+                    <button style="background-color: #ffffff; color: #000000; display: flex; width: 240px; height: 72px; padding: 0px 20px 0px 16px; justify-content: center; align-items: center; border-radius: 9999px; font-weight: 500; transition: background-color 0.3s" onmouseover="this.style.backgroundColor='#f3f4f6'" onmouseout="this.style.backgroundColor='#ffffff'">
+                        Download
+                    </button>
+                    <button style="background-color: rgba(255,255,255,1); backdrop-filter: blur(4px); color: #ffffff; padding: 12px; border-radius: 9999px; transition: background-color 0.3s" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.3)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.2)'">
+                        <i class="ri-download-line" style="font-size: 20px"></i>
+                    </button>
                 </div>
             </div>
 
             <!-- 相机功能卡片 - 浅灰背景、圆角、弹性布局 -->
-            <!-- 单列跨度(col-span-1)、卡片背景(bg-card)、大圆角(rounded-3xl)、内边距(p-6) -->
-            <!-- 弹性列布局(flex flex-col)、两端对齐(justify-between)、悬停效果(hover-scale transition-transform) -->
-            <div class="col-span-1 bg-card rounded-3xl p-6 flex flex-col justify-between hover-scale transition-transform h-[190px]">
-                <h3 class="text-xl font-bold mb-2">Cameras</h3>
-                <div class="text-gray-600 text-sm">
+            <div style="grid-column: span 1; background-color: #F5F5F7; border-radius: 24px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; height: 190px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                <h3 style="font-size: 20px; font-weight: bold; margin-bottom: 8px">Cameras</h3>
+                <div style="color: #4B5563; font-size: 14px">
                     <p>iPhone Cam,</p>
                     <p>DSLR,</p>
                     <p>Digital Cam</p>
                 </div>
-                <div class="mt-4">
+                <div style="margin-top: 16px">
                     <img src="https://images.unsplash.com/photo-1581591524425-c7e0978865fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
                          alt="Camera Interfaces" 
-                         class="w-full h-24 object-contain">
+                         style="width: 100%; height: 96px; object-fit: contain">
                 </div>
-            </div>
-
-            <!-- 主要CTA卡片 - 主题色背景、居中布局 -->
-            <!-- 固定跨度(col-span-2)、主题背景(bg-primary)、大圆角(rounded-3xl)、大内边距(p-8) -->
-            <!-- 弹性列布局(flex flex-col)、水平垂直居中(items-center justify-center)、文本居中(text-center)、悬停效果(hover-scale) -->
-            <div class="col-span-2 bg-primary rounded-3xl p-8 flex flex-col items-center justify-center text-center hover-scale transition-transform h-[190px]">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">The Only Photo Editor<br>You'll Ever Need</h2>
-                <div class="flex space-x-4 mt-6">
-                    <button class="bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors">
-                        Download
-                    </button>
-                    <button class="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors">
-                        <i class="ri-download-line text-xl"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- 团队照片卡片 - 渐变背景、圆角设计 -->
-            <!-- 单列跨度(col-span-1)、对角渐变(bg-gradient-to-br from-amber-200 to-amber-100) -->
-            <!-- 大圆角(rounded-3xl)、溢出隐藏(overflow-hidden)、悬停效果(hover-scale) -->
-            <div class="col-span-1 bg-gradient-to-br from-amber-200 to-amber-100 rounded-3xl overflow-hidden hover-scale transition-transform h-[190px]">
-                <img src="https://images.unsplash.com/photo-1581582914554-8e6d57d3b2d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
-                     alt="Group Photo" 
-                     class="w-full h-full object-cover">
             </div>
 
             <!-- AI 工具介绍卡片 - 响应式布局、浅灰背景 -->
-            <!-- 固定跨度(col-span-2)、卡片背景(bg-card)、大圆角(rounded-3xl)、大内边距(p-8) -->
-            <!-- 弹性布局(flex-row)、垂直居中(items-center)、悬停效果(hover-scale) -->
-            <div class="col-span-2 bg-card rounded-3xl p-8 flex flex-row items-center hover-scale transition-transform h-[190px]">
-                <div class="mr-8">
-                    <p class="text-gray-600 mb-2">Experience the easiest way to edit and the most</p>
-                    <p class="text-gray-600 mb-2">creative AI tools</p>
-                    <p class="text-gray-600">to exploit with BeautyCam</p>
+            <div style="grid-column: span 2; background-color: #F5F5F7; border-radius: 24px; padding: 32px; display: flex; flex-direction: row; align-items: center; height: 190px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                <div style="margin-right: 32px">
+                    <p style="color: #4B5563; margin-bottom: 8px">Experience the easiest way to edit and the most</p>
+                    <p style="color: #4B5563; margin-bottom: 8px">creative AI tools</p>
+                    <p style="color: #4B5563">to exploit with BeautyCam</p>
                 </div>
-                <div class="flex-shrink-0">
+                <div style="flex-shrink: 0">
                     <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
                          alt="AI Tools" 
-                         class="w-32 h-32 object-cover rounded-2xl">
+                         style="width: 128px; height: 128px; object-fit: cover; border-radius: 16px">
                 </div>
             </div>
 
             <!-- 美化视频卡片 - 渐变背景、圆角、相对定位 -->
-            <!-- 单列跨度(col-span-1)、对角渐变(bg-gradient-to-br from-amber-100 to-amber-50) -->
-            <!-- 大圆角(rounded-3xl)、溢出隐藏(overflow-hidden)、相对定位(relative)、悬停效果(hover-scale) -->
-            <div class="col-span-1 bg-gradient-to-br from-amber-100 to-amber-50 rounded-3xl overflow-hidden relative hover-scale transition-transform h-[190px]">
-                <div class="absolute bottom-6 right-6 z-10">
-                    <h3 class="text-white text-xl font-bold text-shadow">Beautify Video</h3>
+            <div style="grid-column: span 1; background: linear-gradient(to bottom right, #fef3c7, #fef9c3); border-radius: 24px; overflow: hidden; position: relative; height: 190px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                <div style="position: absolute; bottom: 24px; right: 24px; z-index: 10">
+                    <h3 style="color: #ffffff; font-size: 20px; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.1)">Beautify Video</h3>
                 </div>
                 <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
                      alt="Beautify Video" 
-                     class="w-full h-full object-cover">
+                     style="width: 100%; height: 100%; object-fit: cover">
             </div>
         </div>
     </main>
