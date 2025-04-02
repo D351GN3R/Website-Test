@@ -43,7 +43,7 @@
     <!-- 导航栏 - 固定定位、毛玻璃效果、圆角设计 -->
     <!-- sticky定位(top-5)、外边距(mx-5)、z轴层级(z-50)、背景色(bg-card)、模糊效果(backdrop-blur-md) -->
     <!-- 内边距(py-5 px-5)、弹性布局(flex justify-between items-center)、圆角(rounded-3xl) -->
-    <header class="mt-5 mx-5 bg-card backdrop-blur-md py-5 px-5 flex justify-between items-center rounded-3xl">
+    <header class="mt-5 mx-5 bg-card py-8 px-5 flex justify-between items-center" style="border-radius: 20px">
         <!-- Logo区域 - 图片 -->
         <div class="flex items-center">
             <img src="/images/logo.png" alt="BeautyCam Logo" class="w-[166px] h-[36px] object-contain">
@@ -51,11 +51,11 @@
         <!-- 导航菜单 - 响应式隐藏、项目间距32px -->
         <nav class="hidden md:flex" style="gap: 32px">
             <!-- 导航链接 - 灰色文字(#374151)、悬停黑色(#000000)、颜色过渡 -->
-            <a href="#" style="color: #374151; transition: color 0.3s" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='#374151'">Photo Editor</a>
-            <a href="#" style="color: #374151; transition: color 0.3s" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='#374151'">Video Editor</a>
-            <a href="#" style="color: #374151; transition: color 0.3s" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='#374151'">Cameras</a>
-            <a href="#" style="color: #374151; transition: color 0.3s" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='#374151'">Editing Tools</a>
-            <a href="#" style="color: #374151; transition: color 0.3s" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='#374151'">AI Photos</a>
+            <a href="#" style="color: rgba(0,0,0,0.5); transition: color 0.3s" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='rgba(0,0,0,0.5)'">Photo Editor</a>
+            <a href="#" style="color: rgba(0,0,0,0.5); transition: color 0.3s" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='rgba(0,0,0,0.5)'">Video Editor</a>
+            <a href="#" style="color: rgba(0,0,0,0.5); transition: color 0.3s" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='rgba(0,0,0,0.5)'">Cameras</a>
+            <a href="#" style="color: rgba(0,0,0,0.5); transition: color 0.3s" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='rgba(0,0,0,0.5)'">Editing Tools</a>
+            <a href="#" style="color: rgba(0,0,0,0.5); transition: color 0.3s" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='rgba(0,0,0,0.5)'">AI Photos</a>
         </nav>
         <button class="md:hidden" style="color: #374151">
             <i class="ri-menu-line" style="font-size: 24px"></i>
@@ -63,13 +63,13 @@
     </header>
 
     <!-- 主要内容区 - Bento Grid 布局 -->
-    <main style="margin: 20px 20px 0 20px; max-height: 900px; overflow: hidden">
+    <main style="margin: 20px 20px 0 20px; max-height: 900px">
         <!-- 网格布局 - 固定4列、间距16px、高度自适应 -->
         <div style="display: grid; gap: 16px; grid-template-columns: repeat(4, 1fr); auto-rows: auto">
             <!-- 美化照片卡片 - 大尺寸 -->
-            <div style="grid-column: span 1; grid-row: span 2; background: linear-gradient(to right, #d8b4fe, #f9a8d4); border-radius: 24px; overflow: hidden; position: relative; height: 400px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+            <div style="grid-column: span 1; grid-row: span 2; background-color: #F5F5F7; border-radius: 20px; overflow: hidden; position: relative; height: 480px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
                 <div style="position: absolute; bottom: 24px; left: 24px; z-index: 10">
-                    <h3 style="color: #ffffff; font-size: 20px; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.1)">Beautify Photo</h3>
+                    <h3 style="color: #FFF; font-family: Montserrat; font-size: 20px; font-style: normal; font-weight: 700; line-height: 125%; text-shadow: 0 2px 4px rgba(0,0,0,0.1)">Beautify Photo</h3>
                 </div>
                 <video src="/images/beautify_photo.mov" 
                      alt="Beautify Photo" 
@@ -78,7 +78,7 @@
             </div>
 
             <!-- 功能图标卡片 - 浅灰背景、圆角、内边距 -->
-            <div style="grid-column: span 1; background-color: #F5F5F7; border-radius: 24px; padding: 24px; height: 190px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+            <div style="grid-column: span 1; background-color: #F5F5F7; border-radius: 24px; padding: 24px; height: 180px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
                 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; height: 100%">
                     <div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
                         <img src="/images/卡片2icon/卡片2icon01.png" alt="Icon 1" style="width: 28px; height: 28px; object-fit: contain">
@@ -102,29 +102,29 @@
             </div>
 
             <!-- 三人图片卡片 - 浅灰背景、圆角、弹性布局 -->
-            <div style="grid-column: span 1; background-color: #F5F5F7; border-radius: 24px; overflow: hidden; height: 190px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+            <div style="grid-column: span 1; background-color: #F5F5F7; border-radius: 20px; overflow: hidden; height: 180px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
                 <img src="/images/三人图片.png" 
                      alt="三人图片" 
                      style="width: 100%; height: 100%; object-fit: cover">
             </div>
 
             <!-- 主要CTA卡片 - 主题色背景、居中布局 -->
-            <div style="grid-column: span 2; background-color: #FFA1ED; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; height: 190px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-                <h2 style="font-size: 36px; font-weight: bold; margin-bottom: 16px">The Only Photo Editor<br>You'll Ever Need</h2>
-                <div style="display: flex; gap: 16px; margin-top: 24px">
-                    <button style="background-color: #ffffff; color: #000000; display: flex; width: 240px; height: 72px; padding: 0px 20px 0px 16px; justify-content: center; align-items: center; border-radius: 9999px; font-weight: 500; transition: background-color 0.3s" onmouseover="this.style.backgroundColor='#f3f4f6'" onmouseout="this.style.backgroundColor='#ffffff'">
+            <div style="grid-column: span 2; background-color: #FFA1ED; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; height: 280px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                <h2 style="color: #000; text-align: center; font-family: Montserrat; font-size: 36px; font-style: normal; font-weight: 700; line-height: 120%; margin-bottom: 16px">The Only Photo Editor<br>You'll Ever Need</h2>
+                <div style="display: flex; margin-top: 30px">
+                    <button style="display: flex; width: 240px; height: 72px; justify-content: center; align-items: center; background-color: #ffffff; color: #000000; border-radius: 9999px; font-weight: 500; transition: background-color 0.3s" onmouseover="this.style.backgroundColor='#f3f4f6'" onmouseout="this.style.backgroundColor='#ffffff'">
                         Download
                     </button>
-                    <button style="background-color: rgba(255,255,255,1); backdrop-filter: blur(4px); color: #ffffff; padding: 12px; border-radius: 9999px; transition: background-color 0.3s" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.3)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.2)'">
-                        <i class="ri-download-line" style="font-size: 20px"></i>
+                    <button style="display: flex; width: 72px; height: 72px; justify-content: center; align-items: center; background-color: #ffffff; border-radius: 9999px; transition: background-color 0.3s" onmouseover="this.style.backgroundColor='#f3f4f6'" onmouseout="this.style.backgroundColor='#ffffff'">
+                        <i class="ri-download-line" style="font-size: 16px; color: #000000"></i>
                     </button>
                 </div>
             </div>
 
             <!-- 相机功能卡片 - 浅灰背景、圆角、弹性布局 -->
-            <div style="grid-column: span 1; background-color: #F5F5F7; border-radius: 24px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; height: 190px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-                <h3 style="font-size: 20px; font-weight: bold; margin-bottom: 8px">Cameras</h3>
-                <div style="color: #4B5563; font-size: 14px">
+            <div style="grid-column: span 1; background-color: #F5F5F7; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; height: 180px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                <h3 style="color: #000000; font-family: Montserrat; font-size: 20px; font-style: normal; font-weight: 700; line-height: 125%; margin-bottom: 8px">Cameras</h3>
+                <div style="color: #00000080; font-size: 14px">
                     <p>iPhone Cam,</p>
                     <p>DSLR,</p>
                     <p>Digital Cam</p>
@@ -137,7 +137,7 @@
             </div>
 
             <!-- AI 工具介绍卡片 - 响应式布局、浅灰背景 -->
-            <div style="grid-column: span 2; background-color: #F5F5F7; border-radius: 24px; padding: 32px; display: flex; flex-direction: row; align-items: center; height: 190px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+            <div style="grid-column: span 2; background-color: #F5F5F7; border-radius: 20px; padding: 32px; display: flex; flex-direction: row; align-items: center; height: 190px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
                 <div style="margin-right: 32px">
                     <p style="color: #4B5563; margin-bottom: 8px">Experience the easiest way to edit and the most</p>
                     <p style="color: #4B5563; margin-bottom: 8px">creative AI tools</p>
@@ -151,9 +151,9 @@
             </div>
 
             <!-- 美化视频卡片 - 渐变背景、圆角、相对定位 -->
-            <div style="grid-column: span 1; background: linear-gradient(to bottom right, #fef3c7, #fef9c3); border-radius: 24px; overflow: hidden; position: relative; height: 190px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+            <div style="grid-column: span 1; background-color: #F5F5F7; border-radius: 20px; overflow: hidden; position: relative; height: 190px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
                 <div style="position: absolute; bottom: 24px; right: 24px; z-index: 10">
-                    <h3 style="color: #ffffff; font-size: 20px; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.1)">Beautify Video</h3>
+                    <h3 style="color: #FFF; font-family: Montserrat; font-size: 20px; font-style: normal; font-weight: 700; line-height: 125%; text-shadow: 0 2px 4px rgba(0,0,0,0.1)">Beautify Video</h3>
                 </div>
                 <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
                      alt="Beautify Video" 
