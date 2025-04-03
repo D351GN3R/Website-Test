@@ -43,7 +43,7 @@
     <!-- 导航栏 - 固定定位、毛玻璃效果、圆角设计 -->
     <!-- sticky定位(top-5)、外边距(mx-5)、z轴层级(z-50)、背景色(bg-card)、模糊效果(backdrop-blur-md) -->
     <!-- 内边距(py-5 px-5)、弹性布局(flex justify-between items-center)、圆角(rounded-3xl) -->
-    <header class="mt-5 mx-5 bg-card flex justify-between items-center" style="border-radius: 20px; padding: 40px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+    <header class="mt-5 mx-5 bg-card flex justify-between items-center" style="border-radius: 20px; padding: 40px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
         <img src="/images/logo.svg" alt="Logo" style="width: 166px; height: 36px; object-fit: contain">
         <!-- 导航菜单 - 响应式隐藏、项目间距32px -->
         <nav class="hidden md:flex" style="gap: 16px">
@@ -52,7 +52,7 @@
             <a href="#" style="color: rgba(0,0,0,0.5); transition: color 0.3s; display: flex; height: 40px; padding: 0px 20px; justify-content: center; align-items: center;" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='rgba(0,0,0,0.5)'">Video Editor</a>
             <a href="#" style="color: rgba(0,0,0,0.5); transition: color 0.3s; display: flex; height: 40px; padding: 0px 20px; justify-content: center; align-items: center;" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='rgba(0,0,0,0.5)'">Cameras</a>
             <a href="#" style="color: rgba(0,0,0,0.5); transition: color 0.3s; display: flex; height: 40px; padding: 0px 20px; justify-content: center; align-items: center;" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='rgba(0,0,0,0.5)'">Editing Tools</a>
-            <a href="#" style="color: rgba(0,0,0,0.5); transition: color 0.3s; display: flex; height: 40px; padding: 0px 20px; justify-content: center; align-items: center;" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='rgba(0,0,0,0.5)'">AI Photos</a>
+            <a href="#" style="color: rgba(0,0,0,0.5); transition: color 0.3s; display: flex; height: 40px; padding: 0px 20px; justify-content: center; align-items: center;" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='rgba(0,0,0,0.5)'">AI Wardrobe</a>
         </nav>
         <button class="md:hidden" style="color: #374151">
             <i class="ri-menu-line" style="font-size: 24px"></i>
@@ -67,7 +67,7 @@
             <div style="grid-column: span 1; grid-row: span 2; background-color: #F5F5F7; border-radius: 20px; overflow: hidden; position: relative; height: 480px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
                 <div style="position: absolute; bottom: 0; left: 0; z-index: 10; display: flex; width: 100%; padding: 30px; flex-direction: column; justify-content: flex-end; align-items: flex-start; background: linear-gradient(180deg, rgba(77, 46, 77, 0.00) 0%, rgba(77, 46, 77, 0.90) 100%)">
                     <h3 style="color: #FFF; font-family: Montserrat; font-size: 20px; font-style: normal; font-weight: 700; line-height: 125%; margin-bottom: 4px">Photo Editor</h3>
-                    <p style="color: rgba(255, 255, 255, 0.60); font-family: Inter; font-size: 16px; font-style: normal; font-weight: 400; line-height: 125%">Experience effortless editing with BeautyCam's most advanced AI tools for flawless, professional-quality photos.</p>
+                    <p style="color: rgba(255, 255, 255, 0.60); font-family: Inter; font-size: 14px; font-style: normal; font-weight: 400; line-height: 125%">Experience effortless editing with BeautyCam's most advanced AI tools for flawless, professional-quality photos.</p>
                 </div>
                 <video src="/images/beautify_photo.mov" 
                      alt="Beautify Photo" 
@@ -77,7 +77,7 @@
 
             <!-- 功能图标卡片 - 浅灰背景、圆角、内边距 -->
             <div style="grid-column: span 1; background-color: #F5F5F7; border-radius: 24px; padding: 24px; height: 180px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; height: 100%">
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0px; height: 100%">
                     <div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
                         <img src="/images/卡片2icon/卡片2icon01.png" alt="Icon 1" style="width: 28px; height: 28px; object-fit: contain">
                     </div>
@@ -101,7 +101,7 @@
 
             <!-- AI 换装卡片 - 浅灰背景、圆角、弹性布局 -->
             <div style="grid-column: span 1; background-color: #F5F5F7; border-radius: 20px; overflow: hidden; height: 180px; transition: transform 0.3s; position: relative" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-                <div style="position: absolute; bottom: 0; left: 0; z-index: 10; display: flex; width: 100%; padding: 20px; flex-direction: column; justify-content: flex-end; align-items: flex-start; background: linear-gradient(180deg, rgba(77, 52, 46, 0) 0%, rgba(77, 52, 46, 0.7) 100%)">
+                <div style="position: absolute; bottom: 0; left: 0; z-index: 10; display: flex; width: 100%; padding: 20px 20px 12px 20px; flex-direction: column; justify-content: flex-end; align-items: flex-start; background: linear-gradient(180deg, rgba(77, 52, 46, 0) 0%, rgba(77, 52, 46, 0.7) 100%)">
                     <h3 style="color: #FFF; font-family: Montserrat; font-size: 16px; font-style: normal; font-weight: 700; line-height: 125%; margin-bottom: 4px">AI Wardrobe</h3>
                 </div>
                 <video src="/images/3AI换装.mov" 
@@ -130,11 +130,14 @@
             <!-- 主要CTA卡片 - 主题色背景、居中布局 -->
             <div style="grid-column: span 2; background-color: #FFA1ED; border-radius: 20px; display: flex; height: 280px; padding: 40px; flex-direction: column; justify-content: center; align-items: center; gap: 30px; flex-shrink: 0; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
                 <h2 style="color: #000; text-align: center; font-family: Montserrat; font-size: 36px; font-style: normal; font-weight: 700; line-height: 120%; margin-bottom: 0">The Only Photo Editor<br>You'll Ever Need</h2>
-                <div style="display: flex">
-                    <button style="display: flex; width: 240px; height: 72px; justify-content: center; align-items: center; background-color: #ffffff; color: #000; border-radius: 9999px; font-family: Montserrat; font-size: 16px; font-style: normal; font-weight: 700; line-height: normal; transition: background-color 0.3s; padding-right: 0;" onmouseover="this.style.backgroundColor='#f3f4f6'" onmouseout="this.style.backgroundColor='#ffffff'">
+                <div style="display: flex; position: relative; width: 312px; overflow: hidden" onmouseover="this.querySelector('.left-icon').style.transform='scale(1)'; this.querySelector('.main-button').style.transform='translateX(72px)'; this.querySelector('.right-icon').style.transform='scale(0)'" onmouseout="this.querySelector('.left-icon').style.transform='scale(0)'; this.querySelector('.main-button').style.transform='translateX(0)'; this.querySelector('.right-icon').style.transform='scale(1)'">
+                    <button style="display: flex; width: 72px; height: 72px; justify-content: center; align-items: center; background-color: #ffffff; border-radius: 9999px; position: absolute; left: 0; transform: scale(0); transition: transform 0.3s ease; z-index: 1;" class="left-icon">
+                        <i class="ri-download-line" style="font-size: 16px; color: #000000"></i>
+                    </button>
+                    <button style="display: flex; width: 240px; height: 72px; justify-content: center; align-items: center; background-color: #ffffff; color: #000; border-radius: 9999px; font-family: Montserrat; font-size: 16px; font-style: normal; font-weight: 700; line-height: normal; transform: translateX(0); transition: transform 0.3s ease; margin-left: 0; z-index: 2;" class="main-button">
                         Download
                     </button>
-                    <button style="display: flex; width: 72px; height: 72px; justify-content: center; align-items: center; background-color: #ffffff; border-radius: 9999px; transition: background-color 0.3s" onmouseover="this.style.backgroundColor='#f3f4f6'" onmouseout="this.style.backgroundColor='#ffffff'">
+                    <button style="display: flex; width: 72px; height: 72px; justify-content: center; align-items: center; background-color: #ffffff; border-radius: 9999px; transform: scale(1); transition: transform 0.3s ease;" class="right-icon">
                         <i class="ri-download-line" style="font-size: 16px; color: #000000"></i>
                     </button>
                 </div>
@@ -151,7 +154,7 @@
             <div style="grid-column: 4; grid-row: 2 / span 2; background-color: #F5F5F7; border-radius: 20px; overflow: hidden; position: relative; height: 480px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
                 <div style="position: absolute; bottom: 0; left: 0; z-index: 10; display: flex; width: 100%; padding: 30px; flex-direction: column; justify-content: flex-end; align-items: flex-start; background: linear-gradient(180deg, rgba(77, 46, 46, 0.00) 0%, rgba(77, 46, 46, 0.70) 100%)">
                     <h3 style="color: #FFF; font-family: Montserrat; font-size: 20px; font-style: normal; font-weight: 700; line-height: 125%; margin-bottom: 4px">Video Editor</h3>
-                    <p style="color: rgba(255, 255, 255, 0.60); font-family: Inter; font-size: 16px; font-style: normal; font-weight: 400; line-height: 125%">Make your videos as stunning as your photos<br>with AI-powered beautification.</p>
+                    <p style="color: rgba(255, 255, 255, 0.60); font-family: Inter; font-size: 14px; font-style: normal; font-weight: 400; line-height: 125%">Make your videos as stunning as your photos<br>with AI-powered beautification.</p>
                 </div>
                 <video src="/images/2视频美颜.mov" 
                      alt="Video Editor" 
