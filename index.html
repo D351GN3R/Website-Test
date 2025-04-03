@@ -23,6 +23,11 @@
         }
     </script>
     <style type="text/tailwindcss">
+        @font-face {
+            src: url('https://res.cloudinary.com/dr6lvwubh/raw/upload/v1529908256/CompressaPRO-GX.woff2');
+            font-family:'Compressa VF';
+            font-style: normal;
+        }
         @layer utilities {
             /* 文字阴影效果 - 轻微阴影提升层次感 */
             .text-shadow {
@@ -36,8 +41,25 @@
             .hover-scale:hover {
                 transform: scale(1.02);
             }
+            /* 动态文字样式 */
+            .dynamic-text {
+                font-family: 'Compressa VF';
+                color: #1D1D1F;
+                text-transform: uppercase;
+                font-weight: 100;
+                font-size: 72px;
+                line-height: 1;
+                margin: 0;
+                user-select: none;
+                width: 100%;
+                letter-spacing: -0.02em;
+            }
+            .dynamic-text span {
+                display: inline-block;
+            }
         }
     </style>
+    <script src="beautycam-text.js" defer></script>
 </head>
 <body class="bg-white font-sans">
     <!-- 导航栏 - 固定定位、毛玻璃效果、圆角设计 -->
@@ -144,10 +166,11 @@
             </div>
 
             <!-- AI 工具介绍卡片 - 响应式布局、浅灰背景 -->
-            <div style="grid-column: span 2; background-color: #F5F5F7; border-radius: 20px; padding: 32px; display: flex; flex-direction: row; align-items: center; height: 180px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-                <div style="margin-right: 32px; align-self: stretch">
+            <div style="grid-column: span 2; background-color: #F5F5F7; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; align-items: flex-start; height: 180px; transition: transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                <div style="margin-bottom: 16px; align-self: stretch">
                     <p style="color: rgba(0, 0, 0, 0.50); font-family: Inter; font-size: 16px; font-style: normal; font-weight: 400; line-height: 125%">Enhance, refine, and transform your photos<br>with the most powerful editing tools.</p>
                 </div>
+                <h1 id="beautycam-text" class="dynamic-text" style="width: 100%">BEAUTYCAM</h1>
             </div>
 
             <!-- 视频编辑卡片 - 渐变背景、圆角、相对定位 - 右下角位置 -->
