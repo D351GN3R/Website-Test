@@ -66,7 +66,6 @@ var VFont = function() {
     this.weight = true;
     this.italic = false;
     this.forceFirstChar = true;
-    this.isHovered = false;
     var title, str, chars = [];
 
     this.init = function() {
@@ -83,18 +82,11 @@ var VFont = function() {
         // 添加hover事件监听
         title.addEventListener('mouseenter', () => {
             this.forceFirstChar = false;
-            this.isHovered = true;
-        });
-
-        title.addEventListener('mouseleave', () => {
-            this.isHovered = false;
-            this.forceFirstChar = true;
         });
         
         // 页面刷新时恢复默认状态
         window.addEventListener('beforeunload', () => {
             this.forceFirstChar = true;
-            this.isHovered = false;
         });
     }
 
@@ -126,15 +118,6 @@ var VFont = function() {
     this.render = function() {
         maxDist = title.getBoundingClientRect().width / 2;
         for (var i = 0; i < chars.length; i++) {
-            if (!this.isHovered) {
-                // 非hover状态下重置字体样式
-                chars[i].wdth = 100;
-                chars[i].wght = 400;
-                chars[i].alpha = 1;
-                chars[i].ital = 0;
-                chars[i].draw();
-                continue;
-            }
             chars[i].update({
                 wght: this.weight,
                 wdth: this.width,
@@ -148,6 +131,4 @@ var VFont = function() {
     return this;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    var txt = new VFont();
-});
+var txt = new VFont();
